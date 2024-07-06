@@ -27,7 +27,7 @@ header {
 }
 
 header a {
-    color: #fff;
+    color: #77aaff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -36,6 +36,7 @@ header a {
 header ul {
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
 header li {
@@ -47,6 +48,8 @@ header .logo {
     text-align: center;
     margin-bottom: 10px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Banner styles */
@@ -65,6 +68,9 @@ header .logo {
 .banner-text {
     color: #333;
     font-size: 24px;
+}
+
+.floating-text {
     animation: floatAnimation 8s ease-in-out infinite;
 }
 
@@ -111,13 +117,13 @@ header .logo {
 /* Animation for floating text */
 @keyframes floatAnimation {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
     50% {
-        transform: translateX(50%);
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
