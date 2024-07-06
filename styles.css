@@ -282,7 +282,6 @@ button.btn:hover {
         transform: translateX(-50%);
     }
 }
-
 /* Apply animation to specific element */
 .section-padding p {
     animation: floatAnimation 8s ease-in-out infinite;
