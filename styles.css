@@ -270,3 +270,20 @@ button.btn {
 button.btn:hover {
     background: #009944; /* Darker lime */
 }
+/* Animation for floating text */
+@keyframes floatAnimation {
+    0% {
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Apply animation to specific element */
+.section-padding p {
+    animation: floatAnimation 8s ease-in-out infinite;
+}
