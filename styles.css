@@ -1,13 +1,9 @@
-/* Reset some basic elements */
-body, h1, h2, p, ul, li {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #f4f4f4;
 }
 
@@ -17,154 +13,260 @@ body {
     overflow: hidden;
 }
 
-/* Header styles */
 header {
-    background: #333;
+    background: #0044cc; /* Blue */
     color: #fff;
-    padding-top: 30px;
+    padding-top: 10px;
     min-height: 70px;
-    border-bottom: #77aaff 3px solid;
+    border-bottom: #ff3333 3px solid; /* Red */
 }
 
-header a {
-    color: #77aaff;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 150px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+header nav ul li {
+    padding: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
 
-header ul {
-    padding: 0;
-    list-style: none;
+.hero {
+    background: #00cc66; /* Lime */
+    color: #fff;
+    padding: 100px 0;
     text-align: center;
 }
 
-header li {
-    display: inline;
-    padding: 0 20px 0 20px;
+.hero h2 {
+    margin: 0;
+    padding-bottom: 20px;
 }
 
-header .logo {
-    text-align: center;
-    margin-bottom: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Banner styles */
-.section-padding {
-    padding: 20px 0;
-    text-align: center;
-    background: #fff;
-}
-
-.banner-heading {
-    color: #77aaff;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.banner-text {
-    color: #333;
-    font-size: 24px;
-}
-
-.floating-text {
-    animation: floatAnimation 8s ease-in-out infinite;
-}
-
-/* Services list styles */
-.service-list {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.service-list li {
-    margin: 10px 0;
-    font-size: 20px;
-    color: #77aaff;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-/* Contact list styles */
-#contact ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-#contact ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-#contact ul li a {
-    color: #77aaff;
-    text-decoration: none;
+.hero p {
     font-size: 18px;
 }
 
-/* Map styles */
-#map iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 450px;
-    border: 0;
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #ff3333; /* Red */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-/* Animation for floating text */
-@keyframes floatAnimation {
-    0% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+/* Change color on hover */
+.btn:hover {
+    background: #cc0000; /* Darker red */
 }
 
-/* Animation for service list items */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.section-padding {
+    padding: 60px 0;
 }
 
-/* Footer styles */
+h2 {
+    text-align: center;
+    color: #0044cc; /* Blue */
+}
+
+.service {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border-left: 5px solid #00cc66; /* Lime */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 footer {
-    background: #333;
+    background: #0044cc; /* Blue */
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    border-top: #77aaff 3px solid;
 }
 
-/* Responsive styles */
+footer p {
+    margin: 0;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    header .container, .section-padding .container, footer .container {
-        width: 95%;
+    header .container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .banner-heading {
-        font-size: 28px;
+    header .logo {
+        width: 120px; /* Adjust width for smaller screens */
     }
 
-    .banner-text {
-        font-size: 18px;
+    header nav ul {
+        flex-direction: column;
+        margin-top: 20px;
     }
 
-    .service-list li {
-        font-size: 18px;
+    header nav ul li {
+        padding: 10px 0;
     }
 
-    #contact ul li a {
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero p {
         font-size: 16px;
     }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    .service {
+        margin: 10px 0;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        width: 100px; /* Further adjust width for smaller screens */
+    }
+
+    header nav ul li {
+        padding: 8px 0;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .service {
+        padding: 10px;
+    }
+}
+/* Contact and Appointment Form Styles */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #0044cc; /* Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-links .btn:hover {
+    background: #003399; /* Darker blue */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00cc66; /* Lime */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background: #009944; /* Darker lime */
 }
