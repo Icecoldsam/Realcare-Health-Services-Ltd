@@ -209,3 +209,64 @@ footer p {
         padding: 10px;
     }
 }
+/* Contact and Appointment Form Styles */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #0044cc; /* Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-links .btn:hover {
+    background: #003399; /* Darker blue */
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00cc66; /* Lime */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background: #009944; /* Darker lime */
+}
