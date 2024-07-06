@@ -270,3 +270,20 @@ button.btn {
 button.btn:hover {
     background: #009944; /* Darker lime */
 }
+@keyframes float-text {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hero h2 {
+    display: inline-block;
+    animation: float-text 5s linear infinite;
+}
+
